@@ -16,7 +16,7 @@ b: backward
 r: right
 l: left
 c: color
-o: round
+o: curve
 pu: pen up
 pd: pen down
 i: print instructions again
