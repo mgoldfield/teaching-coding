@@ -20,10 +20,10 @@ point_of_view = {
 	"im": 'you are',
 	"my": "your",
 	"your": "my",
-	"wasnt": "weren't",
+	"wasnt": "were not",
 }
 
-# make a translator
+# make a translator to remove punctuation
 remove_punctuation = str.maketrans('', '', string.punctuation)
 
 
@@ -32,7 +32,7 @@ while ans != 'bye':
 
 	# 70% of the time do this, 30% of the time do a non-commital response
 	# also if it ends in a question makr, do a non-0commital response
-	if ans.strip()[-1] == '?' or len(ans.split(' ')) < 3 or random() > .25: 
+	if ans.strip()[-1] == '?' or len(ans.split(' ')) < 3 or random() < .25: 
 		prompt = non_commital_responses[randint(0,len(non_commital_responses) - 1)]
 	else:
 
